@@ -50,10 +50,12 @@ public class SpotsDialog extends AlertDialog {
         setContentView(R.layout.dmax_spots_dialog);
         setCanceledOnTouchOutside(false);
 
+        // 初始化view
         initMessage();
         initProgress();
     }
 
+    // onStart()初始化播放动画
     @Override
     protected void onStart() {
         super.onStart();
@@ -62,6 +64,7 @@ public class SpotsDialog extends AlertDialog {
         animator.play();
     }
 
+    // onStop()停止动画
     @Override
     protected void onStop() {
         super.onStop();
@@ -104,6 +107,7 @@ public class SpotsDialog extends AlertDialog {
         for (int i = 0; i < spots.length; i++) {
             Animator move = ObjectAnimator.ofFloat(spots[i], "xFactor", 0, 1);
             move.setDuration(DURATION);
+//            move.setInterpolator(new AccelerateDecelerateInterpolator());
             move.setInterpolator(new HesitateInterpolator());
             move.setStartDelay(DELAY * i);
             animators[i] = move;

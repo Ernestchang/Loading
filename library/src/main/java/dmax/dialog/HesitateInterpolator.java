@@ -5,6 +5,8 @@ import android.view.animation.Interpolator;
 /**
  * Created by Maxim Dybarsky | maxim.dybarskyy@gmail.com
  * on 13.01.15 at 14:20
+ *
+ * first fast,then slow, at last fast，custom interpolator
  */
 class HesitateInterpolator implements Interpolator {
 

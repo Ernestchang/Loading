@@ -5,6 +5,8 @@ import android.animation.*;
 /**
  * Created by Maxim Dybarsky | maxim.dybarskyy@gmail.com
  * on 05.05.15 at 14:45
+ *
+ * 无限循环动画集合标准管理类
  */
 class AnimatorPlayer extends AnimatorListenerAdapter {
 

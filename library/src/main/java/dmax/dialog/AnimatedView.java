@@ -15,6 +15,7 @@ class AnimatedView extends View {
         super(context);
     }
 
+    // 定义get/set方法，类似定义属性，对于动画，可直接改变view坐标值，无需监听动画
     public float getXFactor() {
         return getX() / target;
     }
